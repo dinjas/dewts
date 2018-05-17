@@ -13,6 +13,7 @@ gem 'yarn'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'haml-rails', '~> 1.0'
+gem 'awesome_print'
 
 
 # Reduces boot times through caching; required in config/boot.rb

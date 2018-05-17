@@ -2,4 +2,11 @@
 
 module ApplicationHelper
   include FlashHelper
+
+  DEWTS = 'Dewts'
+  private_constant :DEWTS
+
+  def app_name
+    DEWTS
+  end
 end

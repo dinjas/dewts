@@ -22,6 +22,17 @@ group :development, :test do
   # Call 'byebug' anywhere stop execution and get a debugger console
   gem 'byebug'
   gem 'pry-rails'
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
+  gem 'rspec-jumpstart'
+  gem 'capybara'
+  gem 'simplecov', require: false
+
+  # mutation testing
+  gem 'mutant'
+  gem 'mutant-rspec'
+  gem 'mutator_rails'
+  gem 'parser', '= 2.4.0.2'
 end
 
 group :development do
@@ -36,14 +47,7 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'factory_bot_rails'
-  gem 'rspec-rails'
 
-  # mutation testing
-  gem 'mutant'
-  gem 'mutant-rspec'
-  gem 'mutator_rails'
-  gem 'parser', '= 2.4.0.2'
 
 
   gem 'rspec_junit_formatter'

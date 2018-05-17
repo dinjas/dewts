@@ -1,0 +1,12 @@
+.container
+%nav.navbar.navbar-dark.bg-inverse
+  %ul.nav.navbar-nav.clearfix
+    %li.nav-item
+      %button.navbar-toggler.hidden-sm-up.nav-link{ type: "button",
+                                                    data: { toggle: "collapse", target: "#exCollapsingNavbar2" },
+                                                    aria: { controls: "exCollapsingNavbar2", expanded: "false", label: "Toggle navigation" } }
+        &#9776;
+    #exCollapsingNavbar2.collapse.navbar-toggleable-xs
+      = link_to "Rails bootstrap", root_path, class: 'navbar-brand'
+      %ul.nav.navbar-nav
+        = render 'layouts/navigation_links'

@@ -92,7 +92,7 @@ Style/EmptyMethod:
 # Configuration parameters: EnforcedStyle.
 # SupportedStyles: when_needed, always, never
 Style/FrozenStringLiteralComment:
-  Enabled: false
+  Enabled: true
 
 # Offense count: 2
 Style/MixinUsage:

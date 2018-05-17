@@ -14,7 +14,11 @@ RSpec.shared_examples 'real_model' do
       expect(x).to be_valid
       expect(x).to be_persisted
 
-      x.inactivate rescue true
+      begin
+        x.inactivate
+      rescue StandardError
+        true
+      end
 
       expect(x.destroy).to be_an_instance_of(described_class)
     end

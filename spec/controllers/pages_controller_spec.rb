@@ -3,7 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe PagesController, type: :controller do
-
   describe '#index' do
     it 'GET index' do
       get :index, {}

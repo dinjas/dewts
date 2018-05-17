@@ -17,7 +17,7 @@ gem 'awesome_print'
 gem 'haml-rails', '~> 1.0'
 gem 'bootstrap', '= 4.1.1'
 gem 'jquery-rails'
-
+gem 'font-awesome-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

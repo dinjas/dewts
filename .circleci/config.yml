@@ -67,15 +67,15 @@ jobs:
       - store_test_results:
           path: test_results
 
-#workflows:
-#  version: 2
-#
-#  commit:
-#    jobs:
-#      - build
-#      - backend-tests:
-#          requires:
-#            - build
-#      - upload-coverage:
-#          requires:
-#             - backend-tests
+workflows:
+  version: 2
+
+  commit:
+    jobs:
+      - build
+      - backend-tests:
+          requires:
+            - build
+      - upload-coverage:
+          requires:
+             - backend-tests

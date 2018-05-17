@@ -4,25 +4,7 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/071a81b9bd5f8c3494fa/maintainability)](https://codeclimate.com/github/dinjas/dewts/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/071a81b9bd5f8c3494fa/test_coverage)](https://codeclimate.com/github/dinjas/dewts/test_coverage)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an exploration into using
+[Stimulus](https://github.com/stimulusjs/stimulus) in the context of an
+application for tracking household inventory.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

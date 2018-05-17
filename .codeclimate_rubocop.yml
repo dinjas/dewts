@@ -1,0 +1,30 @@
+inherit_from:
+  - default.yml
+  - .rubocop_todo.yml
+require: rubocop-rspec
+
+AllCops:
+  TargetRubyVersion: 2.3
+  TargetRailsVersion: 4.2
+  DisplayCopNames: true
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'app/one_time_jobs/*'
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'Gemfile*'
+    - 'script/**/*'
+    - 'test/**/*'
+    - 'vendor/**/*'
+
+# Limit line length
+Metrics/LineLength:
+  Max: 12000
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+  Enabled: true
+  

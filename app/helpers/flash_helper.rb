@@ -2,25 +2,24 @@
 
 # Helper class to handle displaying flash content in a bootstrap-friendly manner
 module FlashHelper
-
   FAVICON_CHECK = 'check-circle'
   FAVICON_TIMES = 'times-circle'
   FAVICON_INFO  = 'info-circle'
 
   FAVICON_CLASSES = IceNine.deep_freeze({
-                                            alert:     FAVICON_TIMES,
-                                            danger:    FAVICON_TIMES,
-                                            dark:      FAVICON_INFO,
-                                            error:     FAVICON_TIMES,
-                                            info:      FAVICON_INFO,
-                                            light:     FAVICON_INFO,
-                                            notice:    FAVICON_INFO,
-                                            primary:   FAVICON_INFO,
-                                            secondary: FAVICON_INFO,
-                                            success:   FAVICON_CHECK
-                                        }.with_indifferent_access)
+    alert:     FAVICON_TIMES,
+    danger:    FAVICON_TIMES,
+    dark:      FAVICON_INFO,
+    error:     FAVICON_TIMES,
+    info:      FAVICON_INFO,
+    light:     FAVICON_INFO,
+    notice:    FAVICON_INFO,
+    primary:   FAVICON_INFO,
+    secondary: FAVICON_INFO,
+    success:   FAVICON_CHECK
+  }.with_indifferent_access)
 
-  FLASH_TYPES_WITH_STYLES = %i(alert
+  FLASH_TYPES_WITH_STYLES = %i[alert
                                danger
                                dark
                                error
@@ -28,7 +27,7 @@ module FlashHelper
                                light
                                primary
                                secondary
-                               success).freeze
+                               success].freeze
   private_constant(*constants(false))
 
   def flash_messages

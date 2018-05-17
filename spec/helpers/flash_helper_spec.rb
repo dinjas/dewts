@@ -3,7 +3,6 @@
 require 'rails_helper'
 
 RSpec.describe FlashHelper, type: :helper do
-
   let(:flash_type) { 'notice' }
   let(:message) { 'some awesome string!' }
   let(:flash) { { notice: message } }
@@ -20,7 +19,7 @@ RSpec.describe FlashHelper, type: :helper do
     end
 
     it 'returns expected with alternate' do
-      allow(helper).to receive(:flash).and_return({ danger: 'light' })
+      allow(helper).to receive(:flash).and_return(danger: 'light')
       result = helper.flash_messages
 
       expect(result).to eql('<div class="alert alert-danger alert-dismissible fade show" role="alert">'\
@@ -96,7 +95,6 @@ RSpec.describe FlashHelper, type: :helper do
     end
 
     it 'concats' do
-
     end
   end
 
@@ -213,5 +211,4 @@ RSpec.describe FlashHelper, type: :helper do
       expect(result).to eql('<div class="alert alert-info alert-dismissible fade show" role="alert">foo, bar</div>')
     end
   end
-
 end

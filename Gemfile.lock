@@ -69,8 +69,6 @@ GEM
       rack (>= 1.6.0)
       rack-test (>= 0.6.3)
       xpath (~> 3.0)
-    codeclimate-test-reporter (1.0.8)
-      simplecov (<= 0.13)
     coderay (1.1.2)
     concord (0.1.5)
       adamantium (~> 0.2.0)
@@ -320,7 +318,6 @@ DEPENDENCIES
   bootsnap (>= 1.1.0)
   byebug
   capybara
-  codeclimate-test-reporter
   factory_bot_rails
   haml-rails (~> 1.0)
   hint-rubocop_style

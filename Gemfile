@@ -46,10 +46,5 @@ group :development do
 end
 
 group :test do
-  gem 'capybara'
-
-
-
   gem 'rspec_junit_formatter'
-  gem 'codeclimate-test-reporter'
 end

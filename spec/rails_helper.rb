@@ -14,4 +14,37 @@ RSpec.configure do |config|
   config.use_transactional_fixtures = true
   config.infer_spec_type_from_file_location!
   config.filter_rails_from_backtrace!
+
+  # This allows you to use the core set of syntax methods
+  # (build, build_stubbed, create, attributes_for, and their *_list counterparts)
+  # without having to call them on FactoryBot directly
+  config.include FactoryBot::Syntax::Methods
 end
+
+def klass_name
+  described_class.name.underscore
+end
+
+def subject_class
+  klass_name.to_sym
+end
+
+def subject_class_factory
+  klass_name.split('/').last.to_sym
+end
+
+def factory
+  build(subject_class_factory)
+end
+
+def factory_stubbed
+  build_stubbed(subject_class_factory)
+end
+
+def factory_create
+  create(subject_class_factory)
+end
+
+# def rendered_strings(pdf_object)
+#   PDF::Inspector::Text.analyze(pdf_object.render).strings
+# end

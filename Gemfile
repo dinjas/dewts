@@ -12,8 +12,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'yarn'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
-gem 'haml-rails', '~> 1.0'
 gem 'awesome_print'
+
+gem 'haml-rails', '~> 1.0'
+gem 'bootstrap', '= 4.1.1'
+gem 'jquery-rails'
 
 
 # Reduces boot times through caching; required in config/boot.rb

@@ -54,3 +54,5 @@ end
 group :test do
   gem 'rspec_junit_formatter'
 end
+
+gem 'tzinfo-data', '~> 1.2018', platforms: %i[mingw mswin x64_mingw jruby]

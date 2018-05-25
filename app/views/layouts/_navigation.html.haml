@@ -8,41 +8,37 @@
                           type: 'button' }
     %span.navbar-toggler-icon
   #navbarsExample01.navbar-collapse.collapse{ style: '' }
-    %ul.navbar-nav.mr-auto{ style: 'width: 50%; float: left;' }
+    %ul.navbar-nav.mr-auto
       %li.nav-item.active
         %a.nav-link{ href: '#' }
+          .dnav-icon
+            = fa_icon('home')
           Home
           %span.sr-only(current)
       %li.nav-item
-        %a.nav-link{ href: '#' } Link
-      %li.nav-item
-        %a.nav-link.disabled{ href: '#' } Disabled
-      %li.nav-item.dropdown
-        %a#dropdown01.nav-link.dropdown-toggle{ aria: { expanded: false,
-                                                        haspopup: true },
-                                                data: { toggle:   'dropdown',
-                                                        href:     'https://example.com' } }
-          Dropdown
-        .dropdown-menu{ aria: { labelledby: 'dropdown01' } }
-          %a.dropdown-item{ href: '#' } Sign In
-          %a.dropdown-item{ href: '#' } Sign Up
-          %a.dropdown-item{ href: '#' } About
-    %ul.navbar-nav.mr-auto{ style: 'width: 50%;float: left;' }
-      %li.nav-item.active
         %a.nav-link{ href: '#' }
-          Home
-          %span.sr-only (current)
+          .dnav-icon
+            = fa_icon('sign-in')
+          Sign In
       %li.nav-item
-        %a.nav-link{ href: '#' } Link
-      %li.nav-item
-        %a.nav-link.disabled{ href: '#' } Disabled
-      %li.nav-item.dropdown
-        %a#dropdown01.nav-link.dropdown-toggle{ aria: { expanded: false,
-                                                        haspopup: true },
-                                                data: { toggle:   'dropdown',
-                                                        href:     'https://example.com' } }
+        %a.nav-link.disabled{ href: '#' }
+          .dnav-icon
+            = fa_icon('user-plus')
+          Sign Up
+      %li.navi-item
+        %a.nav-link
+          .dnav-icon
+            = fa_icon('users')
+          About Us
+      - if false  # will be for signed-in users only
+        %li.nav-item.dropdown
+          %a#dropdown01.nav-link.dropdown-toggle{ aria: { expanded: false,
+                                                          haspopup: true },
+                                                  data: { toggle:   'dropdown',
+                                                          href:     'https://example.com' } }
           Dropdown
-        .dropdown-menu{ aria: { labelledby: 'dropdown01' } }
-          %a.dropdown-item{ href: '#' } Action
-          %a.dropdown-item{ href: '#' } Another action
-          %a.dropdown-item{ href: '#' } Something else here
+        .dropdown-menu{ aria: { labelledby: 'dropdown00' } }
+          %a.dropdown-item{ href: '#' }
+            .dnav-icon
+              = fa_icon('sign-out')
+            Sign Out

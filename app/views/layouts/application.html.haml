@@ -1,16 +1,18 @@
 !!!
 %html
   %head
-    %meta{content: "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %meta{ content: 'text/html; charset=UTF-8', 'http-equiv' => 'Content-Type' }/
+    %meta{ content: 'width=device-width, initial-scale=1.0', name: 'viewport' }/
     %title= content_for?(:title) ? yield(:title) : app_name
-    %meta{content: "#{content_for?(:description) ? yield(:description) : app_name}", name: "description"}/
+    %meta{ content: content_for?(:description) ? yield(:description) : app_name,
+           name: 'description' }/
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
     = csrf_meta_tags
   %body
+    = link_to 'Skip to main content', '#main', class: 'sr-only sr-only-focusable'
     %header
       = render 'layouts/navigation'
-    %main{role: "main"}
+    %main#main{ role: 'main' }
       = flash_messages
       = yield

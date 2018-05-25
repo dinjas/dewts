@@ -2,12 +2,12 @@
   %a.navbar-brand{ href: '#' } Dewts
   %button.navbar-toggler{ aria: { controls: 'Dewts - Inventory Tracking',
                                   expanded: 'false',
-                                  label:    'Toggle navigation' },
-                          data: { target: '#navbarsExample01',
+                                  label: 'Toggle navigation' },
+                          data: { target: '#dnavbar',
                                   toggle: 'collapse' },
                           type: 'button' }
     %span.navbar-toggler-icon
-  #navbarsExample01.navbar-collapse.collapse{ style: '' }
+  .navbar-collapse.collapse#dnavbar
     %ul.navbar-nav.mr-auto
       %li.nav-item.active
         %a.nav-link{ href: '#' }
@@ -32,10 +32,10 @@
           About Us
       - if user_signed_in?
         %li.nav-item.dropdown
-          %a#dropdown01.nav-link.dropdown-toggle{ aria: { expanded: false,
-                                                          haspopup: true },
-                                                  data: { toggle:   'dropdown',
-                                                          href:     'https://example.com' } }
+          %a.nav-link.dropdown-toggle{ aria: { expanded: false,
+                                               haspopup: true },
+                                       data: { toggle: 'dropdown',
+                                               href: 'https://example.com' } }
             Account
           .dropdown-menu{ aria: { labelledby: 'dropdown00' } }
             = link_to destroy_user_session_path,

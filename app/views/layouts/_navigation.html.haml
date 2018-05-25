@@ -16,29 +16,31 @@
           Home
           %span.sr-only(current)
       %li.nav-item
-        %a.nav-link{ href: '#' }
+        = link_to new_user_session_path, class: 'nav-link' do
           .dnav-icon
             = fa_icon('sign-in')
           Sign In
       %li.nav-item
-        %a.nav-link.disabled{ href: '#' }
+        = link_to new_user_registration_path, class: 'nav-link disabled' do
           .dnav-icon
             = fa_icon('user-plus')
           Sign Up
-      %li.navi-item
-        %a.nav-link
+      %li.nav-item
+        = link_to '#', class: 'nav-link' do
           .dnav-icon
             = fa_icon('users')
           About Us
-      - if false  # will be for signed-in users only
+      - if user_signed_in?
         %li.nav-item.dropdown
           %a#dropdown01.nav-link.dropdown-toggle{ aria: { expanded: false,
                                                           haspopup: true },
                                                   data: { toggle:   'dropdown',
                                                           href:     'https://example.com' } }
-          Dropdown
-        .dropdown-menu{ aria: { labelledby: 'dropdown00' } }
-          %a.dropdown-item{ href: '#' }
-            .dnav-icon
-              = fa_icon('sign-out')
-            Sign Out
+            Account
+          .dropdown-menu{ aria: { labelledby: 'dropdown00' } }
+            = link_to destroy_user_session_path,
+                      class: 'dropdown-item',
+                      method: :delete do
+              .dnav-icon
+                = fa_icon('sign-out')
+              Sign Out

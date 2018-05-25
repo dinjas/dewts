@@ -1,13 +1,48 @@
-.container
-  %nav.navbar.navbar-dark.bg-inverse
-    %ul.nav.navbar-nav.clearfix
+%nav.navbar.navbar-dark.bg-dark
+  %a.navbar-brand{ href: '#' } Dewts
+  %button.navbar-toggler{ aria: { controls: 'Dewts - Inventory Tracking',
+                                  expanded: 'false',
+                                  label:    'Toggle navigation' },
+                          data: { target: '#navbarsExample01',
+                                  toggle: 'collapse' },
+                          type: 'button' }
+    %span.navbar-toggler-icon
+  #navbarsExample01.navbar-collapse.collapse{ style: '' }
+    %ul.navbar-nav.mr-auto{ style: 'width: 50%; float: left;' }
+      %li.nav-item.active
+        %a.nav-link{ href: '#' }
+          Home
+          %span.sr-only(current)
       %li.nav-item
-        %button.navbar-toggler.hidden-sm-up.nav-link{ type: 'button',
-                                                      data: { toggle: 'collapse', target: '#exCollapsingNavbar2' },
-                                                      aria: { controls: 'exCollapsingNavbar2', expanded: 'false', label: 'Toggle navigation' } }
-          &#9776;
-      #exCollapsingNavbar2.collapse.navbar-toggleable-xs
-        = link_to app_name, root_path, class: 'navbar-brand'
-        %ul.nav.navbar-nav
-          yo
-          = #render 'layouts/navigation_links'
+        %a.nav-link{ href: '#' } Link
+      %li.nav-item
+        %a.nav-link.disabled{ href: '#' } Disabled
+      %li.nav-item.dropdown
+        %a#dropdown01.nav-link.dropdown-toggle{ aria: { expanded: false,
+                                                        haspopup: true },
+                                                data: { toggle:   'dropdown',
+                                                        href:     'https://example.com' } }
+          Dropdown
+        .dropdown-menu{ aria: { labelledby: 'dropdown01' } }
+          %a.dropdown-item{ href: '#' } Sign In
+          %a.dropdown-item{ href: '#' } Sign Up
+          %a.dropdown-item{ href: '#' } About
+    %ul.navbar-nav.mr-auto{ style: 'width: 50%;float: left;' }
+      %li.nav-item.active
+        %a.nav-link{ href: '#' }
+          Home
+          %span.sr-only (current)
+      %li.nav-item
+        %a.nav-link{ href: '#' } Link
+      %li.nav-item
+        %a.nav-link.disabled{ href: '#' } Disabled
+      %li.nav-item.dropdown
+        %a#dropdown01.nav-link.dropdown-toggle{ aria: { expanded: false,
+                                                        haspopup: true },
+                                                data: { toggle:   'dropdown',
+                                                        href:     'https://example.com' } }
+          Dropdown
+        .dropdown-menu{ aria: { labelledby: 'dropdown01' } }
+          %a.dropdown-item{ href: '#' } Action
+          %a.dropdown-item{ href: '#' } Another action
+          %a.dropdown-item{ href: '#' } Something else here

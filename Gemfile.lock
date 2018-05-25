@@ -331,7 +331,7 @@ DEPENDENCIES
   annotate
   awesome_print
   bootsnap (>= 1.1.0)
-  bootstrap (= 4.1.1)
+  bootstrap
   byebug
   capybara
   factory_bot_rails

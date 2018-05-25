@@ -15,6 +15,7 @@ gem 'puma', '~> 3.11'
 
 # Make development fun
 gem 'awesome_print'
+gem 'ice_nine'
 
 # Security
 gem 'devise'

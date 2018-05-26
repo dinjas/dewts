@@ -1,2 +1,38 @@
+inherit_gem:
+  hint-rubocop_style:
+    - default.yml
 inherit_from: .rubocop_todo.yml
+require: rubocop-rspec
 
+AllCops:
+  TargetRubyVersion: 2.5
+  TargetRailsVersion: 5.2
+  DisplayCopNames: true
+  Include:
+    - '**/Rakefile'
+    - '**/config.ru'
+  Exclude:
+    - 'bin/**/*'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'Gemfile*'
+    - 'script/**/*'
+    - 'vendor/**/*'
+
+# Limit line length
+Metrics/LineLength:
+  Max: 12000
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+  Enabled: true
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*.rb'
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test

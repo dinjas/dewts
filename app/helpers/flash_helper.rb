@@ -19,7 +19,7 @@ module FlashHelper
     success:   FAVICON_CHECK
   }.with_indifferent_access)
 
-  FLASH_TYPES_WITH_STYLES = %i[alert
+  FLASH_TYPES_WITH_STYLES = %i(alert
                                danger
                                dark
                                error
@@ -27,7 +27,7 @@ module FlashHelper
                                light
                                primary
                                secondary
-                               success].freeze
+                               success).freeze
   private_constant(*constants(false))
 
   def flash_messages

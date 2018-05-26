@@ -16,14 +16,14 @@ module DeviseHelper
 
   def show_forgot_password_link?
     devise_mapping.confirmable? &&
-        !controller?('passwords') &&
-        !controller?('registrations')
+      !controller?('passwords') &&
+      !controller?('registrations')
   end
 
   def show_unlock_link?
     devise_mapping.lockable? &&
-        resource_class.unlock_strategy_enabled?(:email) &&
-        !controller?('unlocks')
+      resource_class.unlock_strategy_enabled?(:email) &&
+      !controller?('unlocks')
   end
 
   def controller?(str)

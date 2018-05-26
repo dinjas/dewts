@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.describe PagesController, type: :controller do
   describe '#index' do
     it 'GET index' do
-      get :index, {}
+      get :index
 
       expect(response).to have_http_status(:ok)
     end

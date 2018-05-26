@@ -1,12 +1,3 @@
-exclude:
-  - 'app/views/devise/confirmations/*.html.haml'
-  - 'app/views/devise/mailer/*.html.haml'
-  - 'app/views/devise/passwords/*.html.haml'
-  - 'app/views/devise/registrations/*.html.haml'
-  - 'app/views/devise/sessions/*.html.haml'
-  - 'app/views/devise/shared/*.html.haml'
-  - 'app/views/devise/unlocks/*.html.haml'
-
 linters:
   ImplicitDiv:
     enabled: false

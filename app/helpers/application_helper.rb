@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
+  include DeviseHelper
   include FlashHelper
 
   DEWTS = 'Dewts'
@@ -9,4 +10,5 @@ module ApplicationHelper
   def app_name
     DEWTS
   end
+
 end

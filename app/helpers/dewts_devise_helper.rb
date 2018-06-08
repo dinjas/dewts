@@ -3,6 +3,11 @@
 module DewtsDeviseHelper
   include Devise::Controllers::Helpers
 
+  # Attempt to find the mapped route for devise based on request path
+  def devise_mapping
+    @devise_mapping ||= request.env['devise.mapping']
+  end
+
   def show_signin_link?
     !controller?('sessions')
   end
@@ -37,5 +42,17 @@ module DewtsDeviseHelper
     else
       resource.email
     end
+  end
+
+  def resource_name
+    :user
+  end
+
+  def resource
+    @resource ||= User.new
+  end
+
+  def resource_class
+    User
   end
 end

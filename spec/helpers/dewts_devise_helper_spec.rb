@@ -74,4 +74,42 @@ RSpec.describe DewtsDeviseHelper, type: :helper do
     end
   end
 
+  # TODO: auto-generated
+  describe '#devise_mapping' do
+    it 'works' do
+      helper.request = OpenStruct.new(env: { 'devise.mapping' => 'test' })
+
+      result = helper.devise_mapping
+
+      expect(result).to eql('test')
+    end
+  end
+
+  # TODO: auto-generated
+  describe '#resource_name' do
+    it 'works' do
+      result = resource_name
+
+      expect(result).to equal(:user)
+    end
+  end
+
+  # TODO: auto-generated
+  describe '#resource' do
+    it 'works' do
+      result = resource
+
+      expect(result).to be_an_instance_of(User)
+    end
+  end
+
+  # TODO: auto-generated
+  describe '#resource_class' do
+    it 'works' do
+      result = resource_class
+
+      expect(result).to equal(User)
+    end
+  end
+
 end

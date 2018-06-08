@@ -6,6 +6,6 @@ class PagesController < ApplicationController
   end
 
   def about
-    render :inde
+    render :index
   end
 end

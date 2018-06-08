@@ -15,18 +15,19 @@
             = fa_icon('home')
           Home
           %span.sr-only(current)
+      - unless user_signed_in?
+        %li.nav-item
+          = link_to new_user_session_path, class: 'nav-link' do
+            .dnav-icon
+              = fa_icon('sign-in')
+            Sign In
+        %li.nav-item
+          = link_to new_user_registration_path, class: 'nav-link disabled' do
+            .dnav-icon
+              = fa_icon('user-plus')
+            Sign Up
       %li.nav-item
-        = link_to new_user_session_path, class: 'nav-link' do
-          .dnav-icon
-            = fa_icon('sign-in')
-          Sign In
-      %li.nav-item
-        = link_to new_user_registration_path, class: 'nav-link disabled' do
-          .dnav-icon
-            = fa_icon('user-plus')
-          Sign Up
-      %li.nav-item
-        = link_to '#', class: 'nav-link' do
+        = link_to about_path, class: 'nav-link' do
           .dnav-icon
             = fa_icon('users')
           About Us
@@ -36,6 +37,8 @@
                                                haspopup: true },
                                        data: { toggle: 'dropdown',
                                                href: 'https://example.com' } }
+            .dnav-icon
+              = fa_icon('address-card')
             Account
           .dropdown-menu{ aria: { labelledby: 'dropdown00' } }
             = link_to destroy_user_session_path,

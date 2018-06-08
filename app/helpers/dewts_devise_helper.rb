@@ -9,14 +9,20 @@ module DewtsDeviseHelper
   end
 
   def show_signin_link?
+    return false if user_signed_in?
+
     !controller?('sessions')
   end
 
   def show_signup_link?
-    devise_mapping.registerable? && !controller?('registrations')
+    return false if user_signed_in?
+
+    devise_mapping.registerable? &&
+      !controller?('registrations')
   end
 
   def show_confirmation_instructions_link?
+    return false if user_signed_in?
     devise_mapping.confirmable? && !controller?('confirmations')
   end
 
@@ -27,6 +33,8 @@ module DewtsDeviseHelper
   end
 
   def show_unlock_link?
+    return false if user_signed_in?
+
     devise_mapping.lockable? &&
       resource_class.unlock_strategy_enabled?(:email) &&
       !controller?('unlocks')
@@ -55,4 +63,5 @@ module DewtsDeviseHelper
   def resource_class
     User
   end
+
 end

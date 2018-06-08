@@ -1,6 +1,6 @@
 .jumbotron
   %h1.display-4
-    Hi
+    Hi #{current_user&.email}
   %p.lead
     This app is for experimenting with
     = link_to 'Stimulus', 'https://github.com/stimulusjs/stimulus',

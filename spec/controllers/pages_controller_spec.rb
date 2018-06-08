@@ -10,4 +10,13 @@ RSpec.describe PagesController, type: :controller do
       expect(response).to have_http_status(:ok)
     end
   end
+
+  describe '#about' do
+    it 'GET about' do
+      get :about
+
+      expect(response).to have_http_status(:ok)
+    end
+  end
+
 end

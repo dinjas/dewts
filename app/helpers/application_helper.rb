@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module ApplicationHelper
-  include DeviseHelper
+  include DewtsDeviseHelper
   include FlashHelper
 
   DEWTS = 'Dewts'

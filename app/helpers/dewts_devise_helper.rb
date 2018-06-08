@@ -1,13 +1,14 @@
 # frozen_string_literal: true
 
-module DeviseHelper
+module DewtsDeviseHelper
+  include Devise::Controllers::Helpers
 
   def show_signin_link?
     !controller?('sessions')
   end
 
   def show_signup_link?
-    devise_mapping.registerable? && !controller?('sessions')
+    devise_mapping.registerable? && !controller?('registrations')
   end
 
   def show_confirmation_instructions_link?

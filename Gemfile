@@ -3,10 +3,10 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
-ruby '2.5.0'
+ruby '2.6.2'
 
 # Rails support
-gem 'rails', '~> 5.2.0'
+gem 'rails', '~> 5.2.3'
 gem 'pg'
 gem 'jbuilder', '~> 2.5'
 

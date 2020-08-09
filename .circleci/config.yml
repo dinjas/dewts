@@ -1,6 +1,6 @@
 defaults: &defaults
   docker:
-      - image: circleci/ruby:2.5.0-node-browsers
+      - image: circleci/ruby:2.6.6-node-browsers
       - image: circleci/postgres:10.5-alpine
 
 version: 2

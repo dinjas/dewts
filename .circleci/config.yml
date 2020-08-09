@@ -1,6 +1,8 @@
 defaults: &defaults
   docker:
       - image: circleci/ruby:2.6.6-node-browsers
+        environment:
+          BUNDLER_VERSION: 2.1.4
       - image: circleci/postgres:10.5-alpine
 
 version: 2
@@ -13,6 +15,9 @@ jobs:
           keys:
             - dewts-{{ checksum "Gemfile.lock" }}
             - dewts-
+      - run:
+          name: Install Bundler
+          command: gem install bundler:2.1.4
       - run:
           name: Bundle Install
           command: bundle check || bundle install

@@ -11,7 +11,7 @@ gem 'pg'
 gem 'jbuilder', '~> 2.5'
 
 # App Server
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 4.3'
 
 # Make development fun
 gem 'awesome_print'
